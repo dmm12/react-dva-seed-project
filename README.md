@@ -151,7 +151,7 @@ Clone
 
 ```shell
 git clone https://code.choerodon.com.cn/middleware-hiam/self-service-front.git
-cd hzero-platform-fe
+cd react-seed-project
 ```
 
 Git global setup
