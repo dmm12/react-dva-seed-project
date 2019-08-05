@@ -73,65 +73,77 @@
         margin-right: 5px;
       }
     }
+
   }
   :global{
     .ant-layout{
       overflow-y: hidden;
     }
+    .ant-layout-has-sider{
+      background: #0087b4;
+      height: 100vh;
+    }
   }
-  .basic-sider {
-    min-height: 100vh;
-    box-shadow: 2px 0 6px rgba(0, 21, 41, .35);
-    flex: 0 0 256px !important;
-    max-width: 256px !important;
-    min-width: 256px !important;
-    width: 180px !important;
-    margin-top: 65px;
-    overflow: hidden;
-    overflow-y: visible;
-    :global {
-      .ant-layout-sider-children{
-        width: 256px !important;
-      }
-      .ant-layout-sider-trigger {
-        width: 256px !important;
-        display: none;
-      }
-    }
-    &.collapsed {
-      flex: 0 0 80px !important;
-      max-width: 80px !important;
-      min-width: 80px !important;
-      width: 80px !important;
+  .menu-content{
+    height: 100vh;
+    width: 200vh;
+    .basic-sider {
+      min-height: 100vh;
+      height: 100vh;
+      box-shadow: 2px 0 6px rgba(0, 21, 41, .35);
+      flex: 0 0 256px !important;
+      max-width: 256px !important;
+      min-width: 256px !important;
+      width: 180px !important;
+      margin-top: 65px;
+      overflow: hidden;
+      overflow-y: visible;
       :global {
-        .ant-layout-sider-trigger {
-          width: 80px !important;
+        .ant-layout-sider-children{
+          width: 256px !important;
         }
+        .ant-layout-sider-trigger {
+          width: 256px !important;
+          display: none;
+        }
+
       }
-    }
-    .basic-menu {
-      padding-bottom: 80px;
-      width: 256px;
-      overflow-x: hidden;
-      overflow-y: scroll;
       &.collapsed {
-        width: 100px;
+        flex: 0 0 80px !important;
+        max-width: 80px !important;
+        min-width: 80px !important;
+        width: 80px !important;
         :global {
-          .ant-menu-submenu {
-            width: 100px;
+          .ant-layout-sider-trigger {
+            width: 80px !important;
           }
         }
       }
-      .basic-menu-item {
-        padding-left: 68px !important;
-      }
-      :global {
-        .ant-menu-submenu {
-          width: 256px;
+      .basic-menu {
+        padding-bottom: 80px;
+        width: 256px;
+        overflow-x: hidden;
+        overflow-y: scroll;
+        &.collapsed {
+          width: 100px;
+          :global {
+            .ant-menu-submenu {
+              width: 100px;
+            }
+          }
+        }
+        .basic-menu-item {
+          padding-left: 68px !important;
+        }
+        :global {
+          .ant-menu-submenu {
+            width: 256px;
+          }
         }
       }
     }
   }
+
   .basic-content {
     width: 100%;
     margin-top: 65px;

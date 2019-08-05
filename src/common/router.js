@@ -74,6 +74,11 @@ export const getRouterData = app => [
               path: 'backPwd',
               component: dynamicWrapper(app, ['login'], () => import('../routes/User/BackPwd')),
             },
+            {
+              name: 'userDemo',
+              path: 'userDemo',
+              component: dynamicWrapper(app, ['user/userInfoDemo'], () => import('../routes/User/UserInfoDemo')),
+            },
           ],
         },
       ],

@@ -8,9 +8,9 @@ import { ContainerQuery } from 'react-container-query';
 import classNames from 'classnames';
 import Debounce from 'lodash-decorators/debounce';
 import TopLayout from '../layouts/TopLayout';
+import { menuDatas } from '../common/menuDate';
 import Search from './DefaultHeaderSearch';
 import styles from './BasicLayout.less';
-import { menuDatas } from '../common/menuDate';
 
 const { SubMenu } = Menu;
 const { Header, Content, Sider } = Layout;
@@ -205,7 +205,7 @@ class BasicLayout extends React.PureComponent {
         <Header className={styles['basic-header']}>
           <TopLayout />
         </Header>
-        <Layout>
+        <Layout className={styles['menu-content']}>
           <Sider
             collapsible
             breakpoint="md"
