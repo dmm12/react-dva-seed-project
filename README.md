@@ -5,6 +5,13 @@ tag: React dva
 version: 1.0.0
 ---
 
+#入口须知
+
+此项目有三种登录方式
+1.单点登录，重新定向带有token的url,可免登录
+2.自主登录，session存在token，可免登录
+3.自主登录
+
 # 开发指南
 
 本项目是基于`React` `JavaScript`库以及轻量级前端框架`dva`, 并使用`roadhog`脚手架工具搭建的前端`demo`项目.
