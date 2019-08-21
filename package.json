@@ -1,9 +1,9 @@
 {
   "private": true,
   "scripts": {
-    "start": "roadhog server",
-    "build": "roadhog build",
-    "lint": "eslint --ext .js src test",
+    "start": "cross-env BASE_PATH=/ PLATFORM_VERSION=SAAS CLIENT_ID=localhost BPM_HOST=http://192.168.16.172:8170 API_HOST=http://hzerodevb.saas.hand-china.com WEBSOCKET_HOST=ws://192.168.16.172:8120 SRC_WEBSOCKET_HOST=http://192.168.16.127:8412 SRM_MALL_HOST=http://srm-mall.dev.saas.hand-china.com HARD_SOURCE=none node --max_old_space_size=8192 ./node_modules/roadhog/bin/roadhog.js dev",
+    "build": "cross-env BASE_PATH=/ PLATFORM_VERSION=BUILD_PLATFORM_VERSION WEBSOCKET_HOST=BUILD_WEBSOCKET_HOST SRC_WEBSOCKET_HOST=BUILD_SRC_WEBSOCKET_HOST BPM_HOST=BUILD_BPM_HOST CLIENT_ID=BUILD_CLIENT_ID API_HOST=BUILD_API_HOST SRM_MALL_HOST=BUILD_SRM_MALL_HOST ESLINT=none node --max_old_space_size=8192 ./node_modules/roadhog/bin/roadhog.js build",
+    "lint":  "eslint --ext .js src mock tests && npm run lint:style",
     "precommit": "npm run lint"
   },
   "dependencies": {
@@ -31,6 +31,7 @@
   },
   "devDependencies": {
     "babel-plugin-dva-hmr": "^0.3.2",
+    "cross-env": "^5.2.0",
     "eslint": "^6.1.0",
     "eslint-config-umi": "^0.1.1",
     "eslint-plugin-flowtype": "^2.34.1",

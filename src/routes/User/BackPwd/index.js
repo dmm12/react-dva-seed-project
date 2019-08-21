@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import style from './index.less';
 
 export default class UserInfo extends Component {
 
@@ -9,8 +10,8 @@ export default class UserInfo extends Component {
 
   render() {
     return (
-      <div>
-      找回密码的页面
+      <div className={style.content}>
+        <div />
       </div>
     );
   }
