@@ -1,6 +1,7 @@
 import fetch from 'dva/fetch';
 import { notification } from 'hzero-ui';
-import { BASE_API, API_PREFIX } from './constant';
+// import { BASE_API, API_PREFIX } from './constant';
+import {API_HOST } from '../utils/config';
 
 // function parseJSON(response) {
 //   return response.json();
@@ -24,7 +25,8 @@ function checkStatus(response) {
  * @return {object}           An object containing either "data" or "err"
  */
 export default function request(sUrl, options) {
-  const url = BASE_API + API_PREFIX + sUrl;
+
+  const url = `${API_HOST}${sUrl}`;
   const defaultOptions = {
     mode: 'cors',
     // cache: 'force-cache', 表示fetch请求不顾一切的依赖缓存, 即使缓存过期了, 它依然从缓存中读取. 除非没有任何缓存, 那么它将发送一个正常的request.
