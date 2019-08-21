@@ -150,8 +150,6 @@ yarn build
 
 ## Author
 
-邓婷敏(若有问题及时联系)
-
 ## Contributing
 
 Clone
