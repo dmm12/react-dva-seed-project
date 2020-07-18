@@ -16,7 +16,7 @@
     "eslint-config-prettier": "2.9.0",
     "eslint-plugin-prettier": "^3.1.0",
     "hzero-ui": "^1.0.67",
-    "lodash": "^4.17.15",
+    "lodash": "^4.17.19",
     "lodash-decorators": "^6.0.1",
     "mockjs": "^1.0.1-beta3",
     "path-to-regexp": "^3.0.0",
